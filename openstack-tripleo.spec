@@ -39,6 +39,7 @@ Requires:		%{name} = %{version}-%{release}
 BuildArch:		noarch
 
 BuildRequires:		python-sphinx
+BuildRequires:		python-oslo-sphinx
 
 %description	doc
 TripleO is a program aimed at installing, upgrading and operating OpenStack
