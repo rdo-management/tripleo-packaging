@@ -1,4 +1,4 @@
-%global commit c3fb309727671130a32b4c19de48ec22c8530aa1
+%global commit %{upstream_version}
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global alphatag %commit
 %global repo_name tripleo-incubator
@@ -13,8 +13,6 @@ License:		ASL 2.0
 URL:			https://wiki.openstack.org/wiki/TripleO
 Source0:		https://github.com/openstack/%{repo_name}/archive/%{commit}.tar.gz
 Source1:		tripleo
-
-Patch0001:             0001-Use-packaged-template-directory-path.patch
 
 BuildArch:		noarch
 
@@ -51,8 +49,6 @@ This package contains documentation files for TripleO.
 
 %prep
 %setup -q -n %{repo_name}-%{upstream_version}
-
-%patch0001 -p1
 
 %install
 # scripts
